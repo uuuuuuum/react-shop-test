@@ -2,26 +2,26 @@
   "countries": [
     {
       "name": "America",
-      "imagePath": "/images/america.jpeg",
+      "imagePath": "images/america.jpeg",
       "description": "Good America"
     },
     {
       "name": "England",
-      "imagePath": "/images/england.jpeg",
+      "imagePath": "images/england.jpeg",
       "description": "Good England"
     },
     {
       "name": "Germany",
-      "imagePath": "/images/germany.jpeg",
+      "imagePath": "images/germany.jpeg",
       "description": "Good Germany"
     },
     {
       "name": "Portland",
-      "imagePath": "/images/portland.jpeg",
+      "imagePath": "images/portland.jpeg",
       "description": "Good Portland"
     }
   ],
-  "options" : [
+  "options": [
     {
       "name": "Insurance",
       "description": "안전한 여행을 위해서!"
