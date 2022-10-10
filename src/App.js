@@ -1,7 +1,7 @@
 import "./App.css";
 import SummaryPage from "./pages/SummaryPage/SummaryPage";
 import OrderPage from "./pages/OrderPage/OrderPage";
-import OrderContextProvider from "./contexts/OrderContext";
+import { OrderContextProvider } from "./contexts/OrderContext";
 
 function App() {
   return (
