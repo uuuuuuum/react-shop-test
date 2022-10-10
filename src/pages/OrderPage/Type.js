@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Products from "./Products";
 import axios from "axios";
+import ErrorBanner from "../../components/ErrorBanner";
 
 export default function Type({ orderType }) {
-  console.log("orderType, ", orderType);
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     loadItems(orderType);
@@ -16,8 +17,13 @@ export default function Type({ orderType }) {
       setItems(response.data);
     } catch (error) {
       console.error(error);
+      setError(true);
     }
   };
+
+  if (error) {
+    return <ErrorBanner message="에러가 발생했습니다." />;
+  }
 
   const ItemComponents = orderType === "products" ? Products : null;
 
@@ -30,7 +36,6 @@ export default function Type({ orderType }) {
       />
     );
   });
-  console.log("optionItems,", optionItems, items);
 
   return <div>{optionItems}</div>;
 }
