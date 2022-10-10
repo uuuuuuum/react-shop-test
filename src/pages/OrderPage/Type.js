@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Products from "./Products";
 import axios from "axios";
+import Products from "./Products";
+import Options from "./Options";
 import ErrorBanner from "../../components/ErrorBanner";
 
 export default function Type({ orderType }) {
@@ -25,7 +26,7 @@ export default function Type({ orderType }) {
     return <ErrorBanner message="에러가 발생했습니다." />;
   }
 
-  const ItemComponents = orderType === "products" ? Products : null;
+  const ItemComponents = orderType === "products" ? Products : Options;
 
   const optionItems = items.map((item) => {
     return (

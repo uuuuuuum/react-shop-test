@@ -5,6 +5,7 @@ function OrderPage() {
   return (
     <div>
       <Type orderType="products" />
+      <Type orderType="options" />
     </div>
   );
 }
